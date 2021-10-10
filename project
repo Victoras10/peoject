@@ -1,0 +1,34 @@
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+@TeleOp(name= "motor1")
+public abstract class Tutorial extends LinearOpMode
+{
+
+     DcMotor motor;
+
+    @Override
+    public void int()  throws InterruptedException
+    {
+
+       motor = hardwareMap.dcMotor.get( DcMotor.class, deviceName "motor1" )
+       motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+       motor.setMode(DcMotor.RunMode.RUN_TO_POSITION)
+       motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.);
+       motor.setPower(1);
+       motor.setTargetPosition(1000);
+
+    }
+
+    @Override
+    public void loop()
+    {
+
+        motor.setPower(gamepad1.left_trigger)
+
+    }
+d
